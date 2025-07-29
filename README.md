@@ -5,8 +5,6 @@ This project analyzes the relationship between environmental factors (AQI, water
 
 ## Key Visualizations
 
-> **Note**: The visualizations below are placeholder images. The actual interactive 3D WebGL visualizations can be viewed by opening the HTML files in a modern browser with WebGL support.
-
 ### 3D Spatial Analysis
 ![ACTA2 3D Scatter Plot](images/acta2_3d_scatter.png)
 *3D spatial distribution of ACTA2 gene expression across tissue samples*
@@ -37,7 +35,7 @@ This project analyzes the relationship between environmental factors (AQI, water
 
 ## Interactive Visualizations
 
-To view the actual interactive 3D WebGL visualizations:
+For the full interactive 3D WebGL experience:
 
 1. **Open HTML files in a modern browser** (Chrome, Firefox, Safari, Edge)
 2. **Ensure WebGL is enabled** in your browser

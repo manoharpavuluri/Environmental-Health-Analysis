@@ -1,0 +1,96 @@
+# Configuration file for Environmental Health Analysis
+
+# Data Sources
+data_sources:
+  seer:
+    base_url: "https://seer.cancer.gov/data/"
+    api_endpoint: "https://api.seer.cancer.gov/rest/v1/"
+    data_types:
+      - "incidence"
+      - "mortality"
+      - "survival"
+    cancer_types:
+      - "pancreas"
+      - "pancreatic"
+    years: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+    
+  epa_aqi:
+    source: "kaggle"
+    dataset_url: "https://www.kaggle.com/datasets/epa/epa-historical-air-quality"
+    parameters:
+      - "PM2.5"
+      - "Ozone"
+      - "PM10"
+      - "NO2"
+      - "SO2"
+      - "CO"
+    
+  epa_water:
+    base_url: "https://www.epa.gov/ground-water-and-drinking-water"
+    api_endpoint: "https://data.epa.gov/efservice/"
+    contaminants:
+      - "arsenic"
+      - "lead"
+      - "chromium"
+      - "cadmium"
+      - "mercury"
+      - "nitrate"
+      - "trihalomethanes"
+    
+  census:
+    base_url: "https://api.census.gov/data/"
+    api_key_required: true
+    variables:
+      - "B19013_001E"  # Median household income
+      - "B08303_001E"  # Commute time
+      - "B25077_001E"  # Median home value
+      - "B15003_022E"  # Bachelor's degree
+      - "B23025_002E"  # Employment status
+
+# Analysis Parameters
+analysis:
+  spatial:
+    enabled: false  # Disabled spatial analysis
+    resolution: "county"  # county, zip, tract
+    coordinate_system: "EPSG:4326"  # WGS84
+    buffer_distance: 5000  # meters
+    
+  temporal:
+    start_year: 2010
+    end_year: 2020
+    time_lag: 5  # years between exposure and outcome
+    
+  statistical:
+    confidence_level: 0.95
+    significance_threshold: 0.05
+    correlation_method: "pearson"  # pearson, spearman, kendall
+    
+  machine_learning:
+    test_size: 0.2
+    random_state: 42
+    cv_folds: 5
+    models:
+      - "linear_regression"
+      - "random_forest"
+      - "xgboost"
+      - "spatial_regression"
+
+# Visualization Settings
+visualization:
+  map_style: "open-street-map"
+  color_scheme: "viridis"
+  figure_size: [12, 8]
+  dpi: 300
+  
+# Output Settings
+output:
+  format: ["html", "png", "pdf"]
+  save_interactive: true
+  report_template: "templates/report_template.html"
+  
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/analysis.log"
+  max_size: "10MB"
+  backup_count: 5 

@@ -1,0 +1,68 @@
+# Environmental Health Analysis System - Environment Variables
+# This file contains environment variables for API keys and configuration
+# You can load these in your application or convert to .env format
+
+# EPA Data Sources
+# EPA Air Quality data is now sourced from Kaggle dataset
+# Dataset: https://www.kaggle.com/datasets/epa/epa-historical-air-quality
+# No API key required - download manually from Kaggle
+
+# EPA Water Quality API (if needed)
+# Most EPA water data is publicly available, but some APIs may require registration
+epa_water_api_key: "your_epa_water_api_key_here"
+
+# Census API Key
+# Get your Census API key from: https://api.census.gov/data/key_signup.html
+census_api_key: "your_census_api_key_here"
+
+# SEER API Key (if required)
+# Get SEER access from: https://seer.cancer.gov/data/
+seer_api_key: "your_seer_api_key_here"
+
+# Database Configuration (Optional)
+database:
+  host: "localhost"
+  port: 5432
+  name: "environmental_health"
+  user: "your_username"
+  password: "your_password"
+
+# Analysis Configuration
+analysis:
+  start_date: "2020-01-01"
+  end_date: "2020-12-31"
+  log_level: "INFO"
+
+# Data Directories
+directories:
+  data_dir: "./data"
+  raw_data_dir: "./data/raw"
+  processed_data_dir: "./data/processed"
+  results_dir: "./data/results"
+
+# API Rate Limiting (requests per second)
+rate_limits:
+  epa_api: 1
+  census_api: 1
+  seer_api: 1
+
+# Cache Configuration
+cache:
+  enabled: true
+  cache_dir: "./cache"
+  cache_expiry: 3600
+
+# Security
+security:
+  encrypt_api_keys: false
+  api_key_encryption_key: "your_encryption_key_here"
+
+# Development/Production
+environment: "development"
+debug: true
+
+# EPA Data Sources Information
+epa_info:
+  kaggle_dataset_url: "https://www.kaggle.com/datasets/epa/epa-historical-air-quality"
+  water_api_url: "https://data.epa.gov/efservice/"
+  download_instructions: "Download EPA dataset from Kaggle and place in data/raw/epa_aqi/" 

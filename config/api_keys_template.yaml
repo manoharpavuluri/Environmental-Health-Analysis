@@ -1,0 +1,27 @@
+# API Keys Configuration Template
+# Copy this file to config/api_keys.yaml and add your actual API keys
+
+api_keys:
+  epa:
+    aqs_api_key: "your_epa_aqs_api_key_here"
+    water_api_key: "your_epa_water_api_key_here"
+    
+  census:
+    api_key: "your_census_api_key_here"
+    
+  seer:
+    api_key: "your_seer_api_key_here"  # if required
+    
+# Optional: Database configuration
+database:
+  host: "localhost"
+  port: 5432
+  name: "environmental_health"
+  user: "your_username"
+  password: "your_password"
+
+# Usage instructions:
+# 1. Copy this file to config/api_keys.yaml
+# 2. Replace the placeholder values with your actual API keys
+# 3. Never commit api_keys.yaml to version control
+# 4. The system will automatically load these keys when available 

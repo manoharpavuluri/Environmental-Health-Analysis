@@ -5,6 +5,8 @@ This project analyzes the relationship between environmental factors (AQI, water
 
 ## Key Visualizations
 
+> **Note**: The visualizations below are placeholder images. The actual interactive 3D WebGL visualizations can be viewed by opening the HTML files in a modern browser with WebGL support.
+
 ### 3D Spatial Analysis
 ![ACTA2 3D Scatter Plot](images/acta2_3d_scatter.png)
 *3D spatial distribution of ACTA2 gene expression across tissue samples*
@@ -32,6 +34,30 @@ This project analyzes the relationship between environmental factors (AQI, water
 
 ![All Transcripts 3D](images/all_transcripts_3d.png)
 *Comprehensive 3D analysis of all transcript data*
+
+## Interactive Visualizations
+
+To view the actual interactive 3D WebGL visualizations:
+
+1. **Open HTML files in a modern browser** (Chrome, Firefox, Safari, Edge)
+2. **Ensure WebGL is enabled** in your browser
+3. **Wait for the visualizations to load** (may take a moment for 3D content)
+
+### Available Interactive Visualizations:
+- `xenium_acta2_analysis/acta2_3d_scatter.html` - 3D scatter plot of ACTA2 expression
+- `xenium_acta2_analysis/acta2_density_heatmap.html` - Density heatmap visualization
+- `xenium_acta2_analysis/acta2_z_level_spatial.html` - Z-level spatial analysis
+- `xenium_dual_gene_analysis/acta2_fabp4_3d_scatter.html` - Dual gene 3D analysis
+- `xenium_dual_gene_analysis/combined_expression_overlay.html` - Combined expression overlay
+- `xenium_dual_gene_analysis/gene_spatial_distribution.html` - Gene spatial distribution
+- `xenium_expression_filtered_analysis/expression_filtered_3d_visualization.html` - Expression filtered 3D
+- `xenium_all_transcripts_analysis/all_transcripts_3d_visualization.html` - All transcripts 3D
+
+### Quick Access:
+```bash
+# Open all visualizations in your default browser
+./open_visualizations.sh
+```
 
 ## Project Structure
 ```

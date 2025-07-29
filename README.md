@@ -98,4 +98,4 @@ python src/analysis/hotspot_analysis.py
 - **Interactive maps**: Geographic distribution of cancer rates and environmental factors
 - **Statistical reports**: Correlation coefficients, p-values, effect sizes
 - **Time series plots**: Temporal trends in exposure and incidence
-- **Machine learning models**: Predictive models for risk assessment 
+- **Machine learning models**: Predictive models for risk assessment
